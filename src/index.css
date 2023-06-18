@@ -11,7 +11,7 @@
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 *,
 *:before,
@@ -19,12 +19,95 @@ html {
   box-sizing: inherit;
 }
 body {
+  background-color: var(--background_color);
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-
-  line-height: 2;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--header_color);
+  padding: 1em;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.header h1 {
+  color: var(--background_color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  max-width: 200px;
+  text-transform: capitalize;
+  padding-left: 1em;
+}
+
+.header img {
+  width: 50%;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+input {
+  background-color: whitesmoke;
+  display: block;
+  width: 90%;
+  padding: 0.5em;
+  font-size: 1.5rem;
+
+  margin: 2rem auto 0 auto;
+}
+
+button {
+  background-color: var(--button_color);
+  color: var(--background_color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0.5em;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+button:hover {
+  transform: translate(3px, 3px);
+}
+
+/* CARDS */
+
+.cards {
+  width: 90%;
+  margin: 2em auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+/* CARD */
+
+.card {
+  background-color: var(--card_color);
+  color: whitesmoke;
+  padding: 0.5em 1em;
+  text-align: left;
+  border-radius: 5px;
 }
